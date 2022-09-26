@@ -12,6 +12,9 @@
     <form action="" method="post">
       <div class="email-senha">
         <div>
+          <h1>Login</h1>
+        </div>
+        <div>
           Email : <input type="text" name="email" value="">
         </div>
         <div>
@@ -22,6 +25,10 @@
         <div>
           <button type="submit" name="logar">Entrar</button>
         </div>
+      </div>
+      <div>
+        <p>Não tem uma conta? </p>
+        <p><a href="http://localhost/E-commerce/Views/Usuario/cadastro_usuario.php">Cadastre uma!</a></p>
       </div>
     </form>
   </section>

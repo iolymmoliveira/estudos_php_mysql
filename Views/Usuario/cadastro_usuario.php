@@ -12,6 +12,9 @@
     <form action="" method="post">
       <div class="email-senha">
         <div>
+          <h1>Cadastro de Usuário</h1>
+        </div>
+        <div>
           Nome : <input type="text" name="email" value="">
         </div>
         <div>
@@ -25,6 +28,9 @@
         <div>
           <button type="submit" name="cadastrar">Cadastrar</button>
         </div>
+      </div>
+      <div>
+        <p><a href="../../index.php">Realizar Login</a></p>
       </div>
     </form>
   </section>

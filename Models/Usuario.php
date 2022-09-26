@@ -10,6 +10,35 @@
     private $senha;
     private $endereco;
 
+    public function getEmail() {
+      return $this -> email;
+    }
+    public function getSenha() {
+      return $this -> senha;
+    }
+    public function getId() {
+      return $this -> id;
+    }
+    public function getEndereco() {
+      return $this -> endereco;
+    }
+    public function getNome() {
+      return $this -> nome;
+    }
+    
+    public function setEmail($email) {
+      return $this -> email = $email;
+    }
+    public function setSenha($senha) {
+      return $this -> senha = $senha;
+    }
+    public function setEndereco($endereco) {
+      return $this -> endereco = $endereco;
+    }
+    public function setNome($nome) {
+      return $this -> nome = $nome;
+    }
+
     public function Login() {
       $objConexao = new Conexao();
       $conexao = $objConexao -> getConexao();
