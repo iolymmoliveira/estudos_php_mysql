@@ -8,7 +8,7 @@
       $senhaBD = '';
 
       //Criando a Conexão
-      $conexao = new mysqli($host, $usuarioBD, $senhaBD, $bh);
+      $conexao = new mysqli($host, $bd, $usuarioBD, $senhaBD);
  
       //Verifica se foi possível se conectar com sucesso ao banco de dados
       if (!$conexao) die ("Erro de conexão com localhost, o seguinte erro ocorreu -> " .mysql_error());
