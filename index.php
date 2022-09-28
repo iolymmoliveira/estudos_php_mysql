@@ -28,14 +28,16 @@
       </div>
       <div>
         <p>Não tem uma conta? </p>
-        <p><a href="http://localhost/E-commerce/Views/Usuario/cadastro_usuario.php">Cadastre uma!</a></p>
+        <p><a href="http://localhost/ecommerce/Views/Usuario/cadastro_usuario.php">Cadastre uma!</a></p>
       </div>
     </form>
   </section>
 
   <?php
-    $path = $_SERVER['DOCUMENT_ROOT'].'/E-commerce';
+    $path = $_SERVER['DOCUMENT_ROOT'].'/ecommerce';
     include_once($path."/Controllers/usuario_controller.php");
+
+    echo($path);
     
     if(isset($_POST['logar'])){
       $objUsuario = new Usuario();
@@ -47,7 +49,7 @@
       $resposta = $controllerUsuario -> validarUsuario($objUsuario);
 
       if($resposta == "Sucesso!") {
-        header("Location: http://localhost/E-commerce/Views/inicio.php");
+        header("Location: http://localhost/ecommerce/Views/inicio.php");
       } else {
       echo $resposta;
       }

@@ -36,7 +36,7 @@
   </section>
 
   <?php
-    $path = $_SERVER['DOCUMENT_ROOT'].'/E-commerce';
+    $path = $_SERVER['DOCUMENT_ROOT'].'/ecommerce';
     include_once($path."/Controllers/usuario_controller.php");
     
     if(isset($_POST['cadastrar'])){
@@ -47,7 +47,7 @@
       $resposta = $controllerUsuario -> cadastrarUsuario($objUsuario);
 
       if($resposta == "Sucesso!") {
-        header("Location: http://localhost/E-commerce/Views/listagem_produtos.php");
+        header("Location: http://localhost/ecommerce/Views/listagem_produtos.php");
       } else {
       echo $resposta;
       }
