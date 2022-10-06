@@ -22,13 +22,13 @@
 
   <section class="formulario">
     <form action="" method="post">
-      <div class="form-info cadastro-sucesso">
+      <!-- <div class="form-info cadastro-sucesso">
         <p>Dados corretos!</p>
-      </div>
-      <div class="form-info email-existente">
+      </div> -->
+      <!-- <div class="form-info email-existente">
         <p>Senha ou email incorretos.</p> 
         <p>Tente novamente.</p>
-      </div>
+      </div> -->
       <div class="form-info">
         <div class="label">
           <label>E-mail</label>
@@ -55,7 +55,7 @@
 </html>
 
 <?php
-  $path = $_SERVER['DOCUMENT_ROOT'].'ecommerce';
+  $path = $_SERVER['DOCUMENT_ROOT'].'/ecommerce';
   include_once('../Controllers/usuario_controller.php');
 
   if(isset($_POST['logar'])) {
@@ -68,7 +68,7 @@
   $resposta = $controllerUsuario -> validarUsuario($objUsuario);
 
   if($resposta == 'Sucesso!') {
-    header("Location: index_login.php");
+    header("Location: ecommerce.php");
   } else {
     echo $resposta;
   }

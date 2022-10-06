@@ -20,13 +20,13 @@
   </div>
   <section class="formulario">
     <form action="" method="post">
-      <div class="form-info cadastro-sucesso">
+      <!-- <div class="form-info cadastro-sucesso">
         <p>Cadastro Efetuado!</p>
         <p>Faça Login informando o seu email e senha <a href="../index_login.php">aqui</a>.</p>
-      </div>
-      <div class="form-info email-existente">
+      </div> -->
+      <!-- <div class="form-info email-existente">
         <p>O email escolhido já existe. Informe outro e tente novamente.</p>
-      </div>
+      </div> -->
       <div class="form-info">
         <div class="label">
           <label>Nome</label>
@@ -56,26 +56,15 @@
 </html>
 
 <?php
-  // // Verifica se o formulário de cadastro foi submetido
-  // if(isset($_POST['cadastrar'])) {
-  //   print_r($_POST['email']);
-  //   print_r($_POST['nome']);
-  //   print_r($_POST['senha']);
-  // }
-
-  $path = $_SERVER['DOCUMENT_ROOT'].'ecopia';
-  
+  $path = $_SERVER['DOCUMENT_ROOT'].'/ecommerce';
+    
   // //Salvar as informações no Banco de Dados:
   // //Incluir um unica vez o arquivo que faz a conexão com o BD
+  
   include_once('../../Controllers/usuario_controller.php');
-  //Armazena os valores informados no cadastro em uma variável
-  // $email = $_POST['email'];
-  // $nome = $_POST['nome'];
-  // $senha = $_POST['senha'];
-  // //Query de inserção no BD
-  // $resultado = mysqli_query($conexao, "INSERT INTO usuarios(email, endereco, nome, senha) VALUES ('$email', '', '$nome', '$senha')");
 
   if(isset($_POST['cadastrar'])) {
+    //Armazena os valores informados no cadastro em uma variável
     $novoUsuario = new Usuario();
     $novoUsuario -> setNome($_POST['nome']);
     $novoUsuario -> setEmail($_POST['email']);
